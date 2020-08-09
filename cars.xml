@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+    <object model="cars.color" pk="1">
+        <field name="name" type="CharField">черный</field>
+        <field name="hex" type="CharField">#000000</field>
+    </object>
+    <object model="cars.color" pk="2">
+        <field name="name" type="CharField">серый</field>
+        <field name="hex" type="CharField">#c0c0c0</field>
+    </object>
+    <object model="cars.color" pk="3">
+        <field name="name" type="CharField">серебряный</field>
+        <field name="hex" type="CharField">#c0c0c0</field>
+    </object>
+    <object model="cars.color" pk="4">
+        <field name="name" type="CharField">белый</field>
+        <field name="hex" type="CharField">#ffffff</field>
+    </object>
+    <object model="cars.color" pk="5">
+        <field name="name" type="CharField">фуксия</field>
+        <field name="hex" type="CharField">#ff00ff</field>
+    </object>
+    <object model="cars.color" pk="6">
+        <field name="name" type="CharField">пурпурный</field>
+        <field name="hex" type="CharField">#800080</field>
+    </object>
+    <object model="cars.color" pk="7">
+        <field name="name" type="CharField">красный</field>
+        <field name="hex" type="CharField">#ff0000</field>
+    </object>
+    <object model="cars.color" pk="8">
+        <field name="name" type="CharField">бордовый</field>
+        <field name="hex" type="CharField">#800000</field>
+    </object>
+    <object model="cars.color" pk="9">
+        <field name="name" type="CharField">желтый</field>
+        <field name="hex" type="CharField">#ffff00</field>
+    </object>
+    <object model="cars.color" pk="10">
+        <field name="name" type="CharField">оливковый</field>
+        <field name="hex" type="CharField">#808000</field>
+    </object>
+    
+    <object model="cars.car" pk="1">
+        <field name="manufacturer" type="CharField">BMW</field>
+        <field name="model" type="CharField">1 Series M</field>
+        <field name="year" type="IntegerField">2011</field>
+        <field name="transmission" type="SmallIntegerField">0</field>
+        <field name="color" rel="ManyToOneRel" to="cars.color">2</field>
+    </object>
+    <object model="cars.car" pk="2">
+        <field name="manufacturer" type="CharField">Audi</field>
+        <field name="model" type="CharField">A4</field>
+        <field name="year" type="IntegerField">2006</field>
+        <field name="transmission" type="SmallIntegerField">1</field>
+        <field name="color" rel="ManyToOneRel" to="cars.color">10</field>
+    </object>
+    <object model="cars.car" pk="3">
+        <field name="manufacturer" type="CharField">KIA</field>
+        <field name="model" type="CharField">Sportage 1</field>
+        <field name="year" type="IntegerField">2002</field>
+        <field name="transmission" type="SmallIntegerField">0</field>
+        <field name="color" rel="ManyToOneRel" to="cars.color">9</field>
+    </object>
+    <object model="cars.car" pk="4">
+        <field name="manufacturer" type="CharField">Honda</field>
+        <field name="model" type="CharField">Civic</field>
+        <field name="year" type="IntegerField">2010</field>
+        <field name="transmission" type="SmallIntegerField">2</field>
+        <field name="color" rel="ManyToOneRel" to="cars.color">5</field>
+    </object>
+    <object model="cars.car" pk="5">
+        <field name="manufacturer" type="CharField">Dodge</field>
+        <field name="model" type="CharField">Caravan</field>
+        <field name="year" type="IntegerField">2015</field>
+        <field name="transmission" type="SmallIntegerField">1</field>
+        <field name="color" rel="ManyToOneRel" to="cars.color">4</field>
+    </object>
+</django-objects>
